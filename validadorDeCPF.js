@@ -1,7 +1,8 @@
  let cpf = '705.484.450-52'
  
  function validaCpf (cpf){
-
+ if(cpf.length < 11) return false
+ if(cpf == '11111111111') return false
  let cpfLimpo = cpf.replace(/\D+/g, '') //string
  let numerosParaPrimeiroTeste = cpfLimpo.slice(0, -2) //string
  let primeiroDigito = primeiroTeste(numerosParaPrimeiroTeste) //number
